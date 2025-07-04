@@ -24,6 +24,23 @@ public class Main {
             if (course != null) course.displayDetails();
         }
         System.out.println("\nSession 2: Core Domain Modelling Complete.");
-    
+
+        System.out.println("\nSession 3: Initialized Constructore and Auto-ID generation Complete.");
+
+        
+        AttendanceRecord[] attendanceRecords = new AttendanceRecord[3];
+
+        // Sample data for attendance records
+        attendanceRecords[0] = new AttendanceRecord(students[0].getStudentId(), courses[0].getCourseId(), "Present");
+        attendanceRecords[1] = new AttendanceRecord(students[1].getStudentId(), courses[1].getCourseId(), "Absent");
+        attendanceRecords[2] = new AttendanceRecord(students[2].getStudentId(), courses[2].getCourseId(), "Late");
+
+        // Display attendance records
+        System.out.println("\n--- Attendance Records ---");
+        for (AttendanceRecord record : attendanceRecords) {
+            if (record != null) record.displayRecord();
+        }
+
+        System.out.println("\nSession 4: Data Encapsulation and Attendance Records Displayed Complete.");
     }
 }

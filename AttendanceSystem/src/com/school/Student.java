@@ -9,6 +9,14 @@ public class Student {
         this.studentId = nextStudentIdCounter++; // incrementing the counter for each new student
         this.name = name;
        }
+    
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public void displayDetails() {
         System.out.println("Student ID: " + this.studentId + ", Name: " + this.name);
